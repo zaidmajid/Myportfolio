@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Background color black */
+    color: #fff; /* Text color white */
+}
+
+.section {
+    padding: 50px 0;
+    position: relative;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #fff; /* Header text color white */
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill {
+    margin: 15px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.skill:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.skill img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Transition for animation */
+}
+
+.skill:hover img {
+    transform: translateY(-10px); /* Move image up on hover */
+    opacity: 0.8; /* Change opacity on hover */
+}
+
+.skill p {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #fff; /* Skill text color white */
+}
+
+.bg-square {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.2); /* Increased opacity for better visibility */
+    position: absolute;
+    animation: float 6s ease-in-out infinite;
+}
+
+.bg-square:nth-child(2) {
+    width: 150px;
+    height: 150px;
+    left: 20%;
+    top: 20%;
+    animation-delay: 2s;
+}
+
+.bg-square:nth-child(3) {
+    width: 200px;
+    height: 200px;
+    left: 70%;
+    top: 10%;
+    animation-delay: 4s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
