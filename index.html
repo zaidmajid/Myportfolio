@@ -1,36 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Zaid Majid - Portfolio</title>
-    <link rel="stylesheet" href="indexstyles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhammad Zaid Majid | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #0f172a;
+    color: white;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+    text-align: center;
+}
+
+.hero {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+}
+
+.profile {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+h1 { font-size: 2.5em; }
+h2 { color: #38bdf8; }
+
+.buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    background: #38bdf8;
+    padding: 10px 20px;
+    color: black;
+    text-decoration: none;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.btn-outline {
+    border: 1px solid #38bdf8;
+    padding: 10px 20px;
+    color: #38bdf8;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.section {
+    padding: 60px 0;
+}
+
+.dark {
+    background: #020617;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 20px;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.social a {
+    color: white;
+    margin: 10px;
+    font-size: 1.5em;
+}
+</style>
+
 </head>
+
 <body>
-    <header class="animate__animated animate__fadeInDown slow-animation">
-        <div class="container">
-            <div class="bg-square"></div>
-            <div class="bg-square"></div>
-            <div class="bg-square"></div>
-            <img src="images/profile.png" alt="Profile Picture" class="profile-pic">
-            <h1>Muhammad Zaid Majid</h1>
-            <p>Computer Science Student | Aspiring MERN Stack Developer</p>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-            </div>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="container">
+        <img src="images/profile.png" class="profile">
+        <h1>Muhammad Zaid Majid</h1>
+        <h2>MSc Advanced Computer Science | Software Engineer | AI/ML</h2>
+
+        <p>
+            I build scalable full-stack applications, IoT systems, and intelligent ML solutions.
+            Passionate about solving real-world problems through clean architecture and data-driven approaches.
+        </p>
+
+        <div class="buttons">
+            <a href="#projects" class="btn">View Projects</a>
+            <a href="mailto:zaidmajid2345@gmail.com" class="btn-outline">Contact Me</a>
         </div>
-    </header>
-    <nav class="animate__animated animate__fadeInDown slow-animation">
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section">
+<div class="container">
+    <h2>About Me</h2>
+
+    <p>
+        I am an MSc Advanced Computer Science student at Swansea University with strong expertise in 
+        full-stack development, machine learning, and embedded systems.
+    </p>
+
+    <p>
+        I enjoy building systems end-to-end — from embedded hardware (ESP32, Raspberry Pi) 
+        to backend APIs and interactive dashboards.
+    </p>
+
+    <p>
+        Currently working on advanced IoT and machine learning systems focused on real-time 
+        data processing and predictive analytics.
+    </p>
+</div>
+</section>
+
+<!-- EDUCATION -->
+<section class="section dark">
+<div class="container">
+    <h2>Education & Coursework</h2>
+
+    <div class="card">
+        <h3>MSc Advanced Computer Science — Swansea University</h3>
+        <p>2025 – 2027 | Swansea, UK</p>
         <ul>
-            <li><a href="/other_pages/about.html">About</a></li>
-            <li><a href="/other_pages/skills.html">Skills</a></li>
-            <li><a href="/other_pages/projects.html">Projects</a></li>
-            <li><a href="/other_pages/contact.html">Contact</a></li>
+            <li>Machine Learning (Distinction)</li>
+            <li>Deep Learning</li>
+            <li>Computer Vision</li>
+            <li>Operating Systems & Architecture (Merit)</li>
+            <li>Optimisation Techniques (Merit)</li>
+            <li>Wireless Networks & Cyber Security</li>
         </ul>
-    </nav>
+    </div>
+
+    <div class="card">
+        <h3>BSc Computer Science — UET Lahore</h3>
+        <p>2021 – 2025 | Lahore, Pakistan</p>
+        <ul>
+            <li>Data Structures & Algorithms</li>
+            <li>Databases</li>
+            <li>Operating Systems</li>
+            <li>Computer Networks</li>
+            <li>Cyber Security</li>
+        </ul>
+    </div>
+
+</div>
+</section>
+
+<!-- SKILLS -->
+<section class="section">
+<div class="container">
+    <h2>Technical Skills</h2>
+
+    <div class="skills">
+        <div class="card">
+            <h3>Languages</h3>
+            <p>Python, C++, JavaScript, SQL</p>
+        </div>
+
+        <div class="card">
+            <h3>Frameworks</h3>
+            <p>React, React Native, Node.js, FastAPI</p>
+        </div>
+
+        <div class="card">
+            <h3>AI / ML</h3>
+            <p>PyTorch, scikit-learn, TensorFlow, Pandas</p>
+        </div>
+
+        <div class="card">
+            <h3>Tools</h3>
+            <p>Git, Linux, MQTT, InfluxDB, Grafana</p>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section dark">
+<div class="container">
+<h2>Projects</h2>
+
+<div class="projects">
+
+<div class="card">
+    <h3>EdgeGuard</h3>
+    <p>IoT-based predictive maintenance system using ML and real-time sensor data.</p>
+    <ul>
+        <li>Processed multi-sensor data at ≥1 kHz</li>
+        <li>Applied FFT, RMS, and feature engineering</li>
+        <li>Reduced false positives using custom algorithm</li>
+        <li>Deployed on Raspberry Pi (&lt;100ms latency)</li>
+    </ul>
+</div>
+
+<div class="card">
+    <h3>AutoTron</h3>
+    <p>Cross-platform ordering and payment application with AI integration.</p>
+    <ul>
+        <li>Built with MERN stack + React Native</li>
+        <li>Integrated LLM-based interaction</li>
+        <li>Full-stack REST API system</li>
+    </ul>
+</div>
+
+<div class="card">
+    <h3>Land Cover Classification</h3>
+    <p>Machine learning and deep learning comparison project.</p>
+    <ul>
+        <li>Achieved 82.5% accuracy using SVM</li>
+        <li>Applied PCA (70% reduction)</li>
+        <li>Built CNN with regularization techniques</li>
+    </ul>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="section">
+<div class="container">
+<h2>Experience</h2>
+
+<div class="card">
+    <h3>Software Developer Intern — Tiers Limited</h3>
+    <p>Built an e-commerce platform increasing online orders by 40%.</p>
+</div>
+
+<div class="card">
+    <h3>Stock Counter — Retail & Asset Solutions</h3>
+    <p>Handled high-accuracy inventory data across UK retailers.</p>
+</div>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="section dark">
+<div class="container">
+<h2>Contact</h2>
+
+<p>Email: zaidmajid2345@gmail.com</p>
+
+<div class="social">
+    <a href="https://linkedin.com/in/zaidmajid1"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/zaidmajid"><i class="fab fa-github"></i></a>
+</div>
+
+</div>
+</section>
+
 </body>
 </html>

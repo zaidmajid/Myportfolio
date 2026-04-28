@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #000; /* Background color black */
@@ -22,18 +22,37 @@ h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
     color: #fff; /* Header text color white */
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+h2::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background: #ae927c;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .skills-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 30px;
 }
 
 .skill {
     margin: 15px;
     text-align: center;
     transition: transform 0.3s ease-in-out;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .skill:hover {
@@ -88,5 +107,33 @@ h2 {
     }
     50% {
         transform: translateY(-20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill {
+        width: 80%;
+    }
+
+    .skill img {
+        width: 80px;
+        height: 80px;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .skill p {
+        font-size: 1em;
     }
 }
